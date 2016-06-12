@@ -1,0 +1,12 @@
+<ul class="twitts-list container-fluid">
+	<li class="twitt-item row" ng-show="twitts" ng-repeat="twitt in filteredTwitts" ng-click="showTwittDetails({twitt:twitt})">
+		<div class="image-wrapper col-xs-2">
+			<img class="img-rounded" src="{{twitt.user.profile_image_url}}" alt="">
+		</div>
+		<div class="twitt-info col-xs-10">
+			<span class="user-name" ng-bind="twitt.user.name"></span>
+			<span class="user-screen-name" ng-bind="'@' + twitt.user.screen_name"></span>
+			<div class="twitt-description" ng-bind-html="twitt.text | linky:'_blank'"></div>
+		</div>
+	</li>
+</ul>

@@ -1,0 +1,25 @@
+<div class="twitt-details">
+	<h2 ng-bind="title"></h2>
+	<div class="twitt-header container-fluid">
+		<div class="row">
+			<div class="image-wrapper col-xs-2">
+				<img class="img-rounded" src="{{twitt.user.profile_image_url}}" alt="">
+			</div>
+			<div class="twitt-names col-xs-10">
+				<div class="user-name" ng-bind="twitt.user.name"></div>
+				<div class="user-screen-name" ng-bind="'@' + twitt.user.screen_name"></div>			
+			</div>
+		</div>		
+	</div>
+
+	<div class="twitt-description container-fluid">
+		<div class="row" ng-bind-html="twitt.text | linky:'_blank'"></div>
+	</div>
+	
+	<div class="twitt-footer container-fluid">
+		<div class="row uppercase">
+			<span ng-bind="twitt.retweet_count + 'Retweets'"></span>
+			<span ng-bind="twitt.favorite_count + 'Favorites'"></span>
+		</div>
+	</div>
+</div>

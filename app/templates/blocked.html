@@ -1,0 +1,26 @@
+<div class="twitter-blocked">
+	<h2 ng-bind="title"></h2>
+	<div>
+		<form class="form-inline">
+			<div class="form-group">
+				<input type="text" class="form-control" name="screen-name" placeholder="@userName to be blocked" ng-model="userName">
+				<button type="button" class="btn btn-default block-btn" ng-click="blockUser(userName)">
+					<span class="fa-stack">
+						<i class="fa fa-twitter fa-stack-1x text-info"></i>
+						<i class="fa fa-ban fa-stack-2x text-danger"></i>
+					</span>
+				</button>
+			</div>
+		</form>
+	</div>
+	<div>
+		<ul>
+			<li ng-repeat="user in blockedUsers">
+				<span ng-bind="user"></span>
+				<button type="button" class="btn btn-default btn-sm" ng-click="unBlockUser(user)">
+					<span><i class="fa fa-trash-o text-danger"></i></span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>

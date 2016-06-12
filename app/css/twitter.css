@@ -1,0 +1,154 @@
+/*** MAIN CONTAINER ***/
+.main-container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/** COMMON STYLES **/
+h2.page-header {
+	text-align: center;
+	color: #666666;
+}
+
+/*** HEADER ***/
+.twitter-header {
+	color: #FFFFFF;
+	font-size: 1.5em;
+	line-height: 1.8em;
+	background: #398fcc;
+}
+
+.twitter-header .header-icon {
+	color: #2b79af;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	padding: 0.3em 0.5em;
+}
+
+/*** MENU ***/
+.twitter-menu {
+	border-radius: 0;
+}
+
+.twitter-menu .navbar-header .navbar-toggle.custom-left {
+	float: left;
+	margin-left: 15px;
+	margin-right: 0;
+	color: #2b79af;
+	border-color: #2b79af;
+}
+
+.twitter-menu .navbar-collapse li:hover .item-icon{
+	color: #2b79af;
+}
+
+/*** TWITTS LIST ***/
+.twitts-list {
+
+}
+
+.twitts-list .twitt-item {
+	cursor: pointer;
+	list-style: none;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 10px 0;
+}
+
+.twitts-list .twitt-item:last-child {
+	border-bottom: 0;
+}
+
+.twitts-list .twitt-item .image-wrapper,
+.twitt-details .twitt-header .image-wrapper {
+	max-width: 62px;
+	min-width: 62px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.twitts-list .twitt-item .image-wrapper img,
+.twitt-details .twitt-header .image-wrapper img {
+	width: 48px;
+	height: 48px;
+	margin: 2px;
+}
+
+.twitts-list .twitt-item .twitt-info {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.twitts-list .twitt-item .user-name, 
+.twitt-details .twitt-header .user-name {
+	color: #000000;
+	font-weight: bold;
+}
+
+.twitts-list .twitt-item .user-screen-name,
+.twitt-details .twitt-header .user-screen-name {
+	color: #666666;
+	font-weight: bold;
+}
+
+/*** TWITT DETAILS ***/
+.twitt-details .twitt-header.container-fluid {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.twitt-details .twitt-header .twitt-names {
+	padding: 5px;
+}
+
+.twitt-details .twitt-footer .row {
+	color: #666666;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 10px 5px;
+	border-bottom: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+}
+
+/*** BLOCKED USERS ***/
+.twitter-blocked {
+
+}
+
+.twitter-blocked .block-btn {
+	padding: 2px 10px;
+} 
+
+/*** TRENDS ***/
+.twitter-trends {
+	
+}
+
+.twitter-trends ul.trends-list {
+	list-style-type: none;
+}
+
+.twitter-trends ul.trends-list li.trend-item {	
+	cursor: pointer;
+	line-height: 1.7em;
+	border-bottom: 1px solid #e6e6e6;
+    padding: 10px 0;
+}
+
+.twitter-trends ul.trends-list li.trend-item .twitt-info {
+	position: relative;
+}
+
+.twitter-trends ul.trends-list li.trend-item .twitt-info span {
+	float: left;
+	line-height: 1.7em;
+	font-weight: bold;	
+}
+.twitter-trends ul.trends-list li.trend-item .twitt-info span.arrow-icon {
+	float: right;
+}
+
+
+/*** TRENDS LIST ***/
+.trends-twitts-list {
+
+}

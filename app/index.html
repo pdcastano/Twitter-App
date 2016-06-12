@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="twitterApp" ng-strict-di>
+	<head>
+		<title>Twitter App</title>
+		<!-- Mobile first zoom -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- html5 base routes -->
+		<base href="/">
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/twitter.css">
+		<!-- Angularjs core -->
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+		<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="bower_components/ng-lodash/build/ng-lodash.min.js"></script>		
+	</head>
+	<body>
+		<div class="main-container container-fluid">
+			<div twitter-header></div>
+			<div twitter-menu></div>
+			<div class="container-fluid" ng-view>
+				<!-- main templates here -->
+			</div>
+		</div>
+		<!-- scripts -->
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/index.js"></script>
+		<!-- Filters -->
+		<script type="text/javascript" src="scripts/filters/blockedUsers.js"></script>
+		<!-- Factories -->
+		<script type="text/javascript" src="scripts/factories/twitterAPIFactory.js"></script>
+		<script type="text/javascript" src="scripts/factories/blockedUserStorage.js"></script>
+		<script type="text/javascript" src="scripts/factories/timelineStorage.js"></script>
+		<script type="text/javascript" src="scripts/factories/topicStorage.js"></script>
+		<script type="text/javascript" src="scripts/factories/twittsTopicStorage.js"></script>
+		<!-- Services -->
+		<script type="text/javascript" src="scripts/services/geolocalization.js"></script>
+		<!-- Directives -->
+		<script type="text/javascript" src="scripts/directives/twitterHeaderDirective.js"></script>
+		<script type="text/javascript" src="scripts/directives/twitterMenuDirective.js"></script>		
+		<script type="text/javascript" src="scripts/directives/twittDetailsDirective.js"></script>
+		<script type="text/javascript" src="scripts/directives/twittsListDirective.js"></script>
+		<!-- controllers -->
+		<script type="text/javascript" src="scripts/controllers/timelineController.js"></script>
+		<script type="text/javascript" src="scripts/controllers/blockedController.js"></script>
+		<script type="text/javascript" src="scripts/controllers/trendsController.js"></script>
+		<script type="text/javascript" src="scripts/controllers/trendsListController.js"></script>
+		<script type="text/javascript" src="scripts/controllers/twittDetailsController.js"></script>
+		<script type="text/javascript" src="scripts/controllers/trendsTwittsController.js"></script>
+	</body>
+</html>

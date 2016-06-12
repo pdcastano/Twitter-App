@@ -1,0 +1,26 @@
+{
+  "name": "twitter-app",
+  "version": "1.0.0",
+  "description": "Twitter app with angular",
+  "main": "index.js",
+  "scripts": {
+    "test": {
+      "test": "grunt test"
+    }
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Pedro Daniel Castano",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-keepalive": "^1.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1"
+  }
+}

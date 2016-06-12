@@ -1,0 +1,11 @@
+<div class="twitter-trends">
+	<h1 ng-bind="title"></h1>
+	<ul class="trends-list container-fluid">
+		<li class="trend-item row" ng-repeat="trend in topics" ng-click="showTwitts($index)">
+			<div class="twitt-info col-xs-12">
+				<span class="trend-text" ng-bind="trend.name"></span>
+				<span class="arrow-icon fa fa-chevron-right"></span>
+			</div>
+		</li>
+	</ul>
+</div>
