@@ -1,17 +1,19 @@
 twitterApp.controller("twittDetailsController", 
 	['$scope', '$routeParams', 'twitterAPIFactory', 
 	function($scope, $routeParams, twitterAPIFactory) {
-		
-		$scope.init = function(){
-			$scope.twittId = parseInt($routeParams.id);
-			this.getTwittDetails();
+		var self = this;
+
+		this.init = function(){
+			self.twittId = parseInt($routeParams.id);
+			self.getTwittDetails();
 		};
 
-		$scope.getTwittDetails = function(){
-			twitterAPIFactory.getTwittDetails(this.twittId).then( function(response) {
-		    	$scope.twitt = response;
+		this.getTwittDetails = function(){
+			twitterAPIFactory.getTwittDetails(self.twittId).then( function(response) {
+		    	self.twitt = response;
 			});
 		};
 
-	    $scope.init();
-}]);
+	    this.init();
+	}
+]);

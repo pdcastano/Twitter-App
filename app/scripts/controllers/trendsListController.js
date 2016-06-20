@@ -1,21 +1,23 @@
 twitterApp.controller('trendsListController',
 	['$scope', '$location','$routeParams', 'topicStorage', 'twitterAPIFactory', 'blockedUsersFilter',
 	function($scope, $location, $routeParams, topicStorage, twitterAPIFactory, blockedUsersFilter) {
-	
-	$scope.init = function() {		
-		$scope.topicId = $routeParams.id;
-		$scope.trendTopic = topicStorage.getData()[$scope.topicId];
-		$scope.title = "Twitts on " + $scope.trendTopic.name;
-		twitterAPIFactory.searchTrendingTopics($scope.trendTopic.query).then(function(twitts){
-			$scope.twitts = twitts;
-			$scope.filteredTwitts = blockedUsersFilter($scope.twitts);
-		});
-	};
+		var self = this;
 
-	$scope.showTwittDetails = function(twitt){
-		var index = $scope.twitts.indexOf(twitt);
-		$location.path('trends/' + $scope.topicId + '/' + index);
-	};
+		this.init = function() {		
+			self.topicId = $routeParams.id;
+			self.trendTopic = topicStorage.getData()[self.topicId];
+			self.title = "Twitts on " + self.trendTopic.name;
+			twitterAPIFactory.searchTrendingTopics(self.trendTopic.query).then(function(twitts){
+				self.twitts = twitts;
+				self.filteredTwitts = blockedUsersFilter(self.twitts);
+			});
+		};
 
-	$scope.init();
-}]);
+		this.showTwittDetails = function(twitt){
+			var index = self.twitts.indexOf(twitt);
+			$location.path('trends/' + self.topicId + '/' + index);
+		};
+
+		this.init();
+	}
+]);

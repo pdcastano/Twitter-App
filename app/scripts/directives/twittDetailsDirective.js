@@ -4,6 +4,13 @@ twitterApp.directive('twittDetails', function(){
 		replace: true,
 		transclude: false,
 		templateUrl: "../templates/twitt-details.html",
+		scope: {
+			title: "=",
+			twitt: "="
+		},
+		controller: ['$scope', function($scope){
+			//TODO
+		}],
 		link: function($scope,element,attrs){
 			//TODO
 		}
