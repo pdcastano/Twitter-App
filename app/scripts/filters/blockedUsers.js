@@ -9,12 +9,9 @@ twitterApp.filter('blockedUsers', ['blockedUserStorage', function(blockedUserSto
 		if (twitts.length && blockedUsers.length) {
 			twitts.forEach(function(twitt,index) {
 				screenName = "@" + twitt.user.screen_name;
-				blockedUsers.forEach(function(blockedUser,index2) {
-					if (screenName == blockedUser) {
-						return;
-					}
+				if (blockedUsers.indexOf(screenName) == -1) {
 					twittsUnblocked.push(twitt);
-				});
+				}
 			});
 		}else{
 			twittsUnblocked = twitts;

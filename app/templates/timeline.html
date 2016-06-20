@@ -1,6 +1,9 @@
 <div class="timeline-twitts-list">
-	<h2 ng-bind="title"></h2>
-	<twitts-list twitts="twitts" filtered-twitts="filteredTwitts" show-twitt-details="showTwittDetails(twitt)">
+	<h2 ng-bind="twittsTimeline.title"></h2>
+	<twitts-list 
+		twitts="twittsTimeline.twitts" 
+		filtered-twitts="twittsTimeline.filteredTwitts" 
+		show-twitt-details="twittsTimeline.showTwittDetails(twitt)">
 		<!-- timeline twitts list -->
 	</twitts-list>
 </div>

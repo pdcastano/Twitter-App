@@ -13,8 +13,8 @@ twitterApp.config(['$routeProvider','$locationProvider',
 
 		$routeProvider.when('/', {
 			templateUrl: 'templates/timeline.html',
-			controller: 'timelineController',
-			controllerAs: 'timeline'
+			controller: 'twittsTimelineController',
+			controllerAs: 'twittsTimeline'
 		}).when('/timeline',{
 			redirectTo: "/"
 		}).when('/timeline/:id', {
@@ -23,20 +23,20 @@ twitterApp.config(['$routeProvider','$locationProvider',
 			controllerAs: 'twittDetails'
 		}).when("/blocked", {
 			templateUrl: 'templates/blocked.html',
-			controller: 'blockedController',
-			controllerAs: 'blocked'
+			controller: 'blockedUsersController',
+			controllerAs: 'blockedUsers'
 		}).when("/trends", {
 			templateUrl: 'templates/trends.html',
-			controller: 'trendsController',
-			controllerAs: 'trends'
+			controller: 'trendTopicsController',
+			controllerAs: 'trendTopics'
 		}).when("/trends/:id", {
 			templateUrl: 'templates/trends-list.html',
 			controller: 'trendsListController',
 			controllerAs: 'trendsList'
 		}).when("/trends/:id/:twittId", {
 			templateUrl: 'templates/trends-twitt-details.html',
-			controller: 'trendsTwittsController',
-			controllerAs: 'trendsTwittDetails'
+			controller: 'trendTwittDetailsController',
+			controllerAs: 'trendTwittDetails'
 		}).otherwise({
 			redirectTo: "/"
 		});

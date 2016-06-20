@@ -1,6 +1,8 @@
 <div class="trends-twitts-list">
-	<h2 ng-bind="title"></h2>
-	<twitts-list twitts="twitts" filtered-twitts="filteredTwitts" show-twitt-details="showTwittDetails(twitt)">
+	<h2 ng-bind="trendsList.title"></h2>
+	<twitts-list twitts="trendsList.twitts" 
+				 filtered-twitts="trendsList.filteredTwitts" 
+ 				 show-twitt-details="trendsList.showTwittDetails(twitt)">
 		<!-- trends twitts list -->
 	</twitts-list>
 </div>
